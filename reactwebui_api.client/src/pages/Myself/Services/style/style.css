@@ -1,0 +1,24 @@
+/*@import url('https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css');*/
+/* src/Services/style/style.css */
+
+/* Example CSS for responsiveness */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+}

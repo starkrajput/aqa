@@ -1,0 +1,135 @@
+.navbar {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    z-index: 1000 !important;
+    transition: top 0.3s !important, background-color 0.3s !important;
+}
+
+    .navbar.hidden {
+        top: -80px !important;
+        /* Adjust based on your navbar height */
+    }
+
+    .navbar.scrolled {
+        background: rgb(2,0,36) !important;
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(37,215,251,1) 100%) !important;
+    }
+
+.navbar-logo {
+    font-size: 2.0rem !important;
+    font-weight: bold !important;
+}
+
+.navbar-menu-icon {
+    display: none !important;
+    font-size: 1.8rem !important;
+    cursor: pointer !important;
+    color: white !important;
+}
+
+.navbar-menu {
+    display: flex !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-right: 150px !important;
+    font-size: 1.2rem !important;
+}
+
+    .navbar-menu li {
+        margin-left: 20px !important;
+        position: relative !important;
+        list-style: none !important;
+    }
+
+    .navbar-menu a {
+        color: white !important;
+        text-decoration: none !important;
+    }
+
+.dropdown-container {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    padding: 10px !important;
+    border-radius: 5px !important;
+    white-space: nowrap !important;
+    z-index: 1000 !important;
+    gap: 20px !important; /* Add space between the two columns */
+}
+
+.navbar-menu li:hover .dropdown-container {
+    display: flex !important;
+}
+
+.dropdown-menu {
+    background-color: transparent !important; /* Make individual dropdown backgrounds transparent */
+    padding: 0 !important;
+}
+
+    .dropdown-menu li {
+        margin: 5px 0 !important;
+        padding: 5px !important;
+        color: white !important;
+        position: relative !important; /* For sub-menu positioning */
+    }
+
+        .dropdown-menu li:hover {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .dropdown-menu li .sub-menu {
+            display: none !important;
+            position: absolute !important;
+            left: 100% !important;
+            top: 0 !important;
+            background-color: rgba(0, 0, 0, 0.8) !important;
+            padding: 10px !important;
+            border-radius: 5px !important;
+            white-space: nowrap !important;
+        }
+
+        .dropdown-menu li:hover .sub-menu {
+            display: block !important;
+        }
+
+@media (max-width: 768px) {
+    .navbar-menu-icon {
+        display: block !important;
+    }
+
+    .navbar-menu {
+        display: none !important;
+        flex-direction: column !important;
+        background: rgba(0, 0, 0, 0.9) !important;
+        position: absolute !important;
+        top: 50px !important;
+        width: 100% !important;
+        left: 0 !important;
+    }
+
+        .navbar-menu.open {
+            display: flex !important;
+        }
+
+        .navbar-menu li {
+            margin: 10px 0 !important;
+            text-align: center !important;
+        }
+
+    .dropdown-menu {
+        position: static !important;
+    }
+
+        .dropdown-menu li {
+            margin: 10px 0 !important;
+        }
+}
